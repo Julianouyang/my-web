@@ -15,6 +15,8 @@ import {
 } from '@angular/material';
 import { AboutMeComponent } from './about-me/about-me.component';
 import { MyNavComponent } from './my-nav/my-nav.component';
+import { BlogComponent } from './blog/blog.component';
+import { HomePageComponent } from './home-page/home-page.component';
 
 
 
@@ -22,7 +24,9 @@ import { MyNavComponent } from './my-nav/my-nav.component';
   declarations: [
     AppComponent,
     AboutMeComponent,
-    MyNavComponent
+    MyNavComponent,
+    BlogComponent,
+    HomePageComponent
   ],
   imports: [
     BrowserModule,
