@@ -1,0 +1,11 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "server side of the web app",
+  "main": "server.js",
+  "scripts": {
+    "test": "start"
+  },
+  "author": "Julian Ouyang",
+  "license": "ISC"
+}
