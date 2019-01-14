@@ -4,8 +4,16 @@
   "description": "server side of the web app",
   "main": "server.js",
   "scripts": {
-    "test": "start"
+    "start": "./node_modules/.bin/nodemon src/server.js"
   },
   "author": "Julian Ouyang",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "firebase": "^5.7.3"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.9"
+  }
 }

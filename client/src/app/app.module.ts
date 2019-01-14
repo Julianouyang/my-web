@@ -11,13 +11,14 @@ import {
   MatCardModule,
   MatListModule,
   MatInputModule,
-  MatSidenavModule
+  MatSidenavModule,
+  MatDialogModule
 } from '@angular/material';
 import { AboutMeComponent } from './about-me/about-me.component';
 import { MyNavComponent } from './my-nav/my-nav.component';
 import { BlogComponent } from './blog/blog.component';
 import { HomePageComponent } from './home-page/home-page.component';
-
+import { SigninComponent } from './auth/signin/signin.component';
 
 
 @NgModule({
@@ -26,7 +27,8 @@ import { HomePageComponent } from './home-page/home-page.component';
     AboutMeComponent,
     MyNavComponent,
     BlogComponent,
-    HomePageComponent
+    HomePageComponent,
+    SigninComponent
   ],
   imports: [
     BrowserModule,
@@ -38,9 +40,11 @@ import { HomePageComponent } from './home-page/home-page.component';
     MatCardModule,
     MatListModule,
     MatInputModule,
-    MatSidenavModule
+    MatSidenavModule,
+    MatDialogModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [SigninComponent]
 })
 export class AppModule { }
