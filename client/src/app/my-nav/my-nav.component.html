@@ -13,9 +13,10 @@
     <a mat-button routerLink="/blog">
       Blog
     </a>
-    <a mat-button routerLink="/signin">
+    <a mat-button 
+      (click)=onSignin()
+      matTooltip="Sign In">
       <i class="material-icons">face</i>
-      
     </a>
   </mat-toolbar>
 </mat-sidenav-container>

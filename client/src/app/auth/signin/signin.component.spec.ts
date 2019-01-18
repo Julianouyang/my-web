@@ -1,6 +1,11 @@
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { SigninComponent } from './signin.component';
+import {
+  MatInputModule,
+  MatDialogModule,
+  MatFormFieldModule
+} from '@angular/material';
 
 describe('SigninComponent', () => {
   let component: SigninComponent;
@@ -8,6 +13,12 @@ describe('SigninComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      imports: [
+        MatFormFieldModule,
+        MatDialogModule,
+        MatInputModule,
+        BrowserAnimationsModule
+      ],
       declarations: [ SigninComponent ]
     })
     .compileComponents();

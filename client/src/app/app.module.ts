@@ -1,3 +1,4 @@
+import { AuthService } from './auth/auth.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -12,13 +13,16 @@ import {
   MatListModule,
   MatInputModule,
   MatSidenavModule,
-  MatDialogModule
+  MatDialogModule,
+  MatTooltipModule
 } from '@angular/material';
 import { AboutMeComponent } from './about-me/about-me.component';
 import { MyNavComponent } from './my-nav/my-nav.component';
 import { BlogComponent } from './blog/blog.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { SigninComponent } from './auth/signin/signin.component';
+import { AuthGuard } from './auth/auth-guard.service';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -34,6 +38,7 @@ import { SigninComponent } from './auth/signin/signin.component';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    FormsModule,
     MatButtonModule,
     MatCheckboxModule,
     MatToolbarModule,
@@ -41,9 +46,10 @@ import { SigninComponent } from './auth/signin/signin.component';
     MatListModule,
     MatInputModule,
     MatSidenavModule,
-    MatDialogModule
+    MatDialogModule,
+    MatTooltipModule
   ],
-  providers: [],
+  providers: [AuthGuard, AuthService],
   bootstrap: [AppComponent],
   entryComponents: [SigninComponent]
 })
