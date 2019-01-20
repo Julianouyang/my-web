@@ -20,19 +20,24 @@ export class MyNavComponent implements OnInit {
   }
 
   onSignin() {
-    const dialogRef = this.dialog.open(SigninComponent, {
-      width: '300px',
-      height: '270px',
-      data: {
-        email: '',
-        password: undefined
-      }
-    });
+      const dialogRef = this.dialog.open(SigninComponent, {
+        width: '300px',
+        height: '270px',
+        data: {
+          email: '',
+          password: undefined
+        }
+      });
 
-    dialogRef.afterClosed().subscribe((result: User) => {
-      if (result !== undefined && result.email && result.password) {
-        this.authService.signinUser(result.email, result.password);
-      }
-    });
+      dialogRef.afterClosed().subscribe((result: User) => {
+        if (result !== undefined && result.email && result.password) {
+          this.authService.signinUser(result.email, result.password);
+        }
+      });
   }
+
+  onSignout() {
+    this.authService.signoutUser();
+  }
+
 }

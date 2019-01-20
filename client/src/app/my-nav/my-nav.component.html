@@ -15,8 +15,14 @@
     </a>
     <a mat-button 
       (click)=onSignin()
+      *ngIf="!authService.isAuthenticated()"
       matTooltip="Sign In">
       <i class="material-icons">face</i>
+    </a>
+    <a mat-button
+      *ngIf="authService.isAuthenticated()"
+      (click)=onSignout()>
+      Log out
     </a>
   </mat-toolbar>
 </mat-sidenav-container>
