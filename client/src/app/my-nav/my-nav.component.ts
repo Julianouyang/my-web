@@ -13,7 +13,7 @@ export class MyNavComponent implements OnInit {
 
   constructor(
     private dialog: MatDialog,
-    private authService: AuthService
+    public authService: AuthService
   ) { }
 
   ngOnInit() {

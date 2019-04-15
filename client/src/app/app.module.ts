@@ -10,13 +10,17 @@ import {
   MatCheckboxModule,
   MatToolbarModule,
   MatCardModule,
-  MatListModule,
+
   MatInputModule,
   MatSidenavModule,
   MatDialogModule,
-  MatTooltipModule
+  MatTooltipModule,
+  MatDividerModule
 } from '@angular/material';
-import { AboutMeComponent } from './about-me/about-me.component';
+
+import {
+  MatListModule,
+} from '@angular/material/list';
 import { MyNavComponent } from './my-nav/my-nav.component';
 import { BlogComponent } from './blog/blog.component';
 import { HomePageComponent } from './home-page/home-page.component';
@@ -28,7 +32,6 @@ import { FormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
-    AboutMeComponent,
     MyNavComponent,
     BlogComponent,
     HomePageComponent,
@@ -47,7 +50,8 @@ import { FormsModule } from '@angular/forms';
     MatInputModule,
     MatSidenavModule,
     MatDialogModule,
-    MatTooltipModule
+    MatTooltipModule,
+    MatDividerModule
   ],
   providers: [AuthGuard, AuthService],
   bootstrap: [AppComponent],
