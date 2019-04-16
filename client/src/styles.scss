@@ -7,9 +7,9 @@
 @include mat-core();
 
 $dark-primary: mat-palette($mat-grey, 900);
-$dark-accent:  mat-palette($mat-amber, A200, A100, A400);
-$dark-warn:    mat-palette($mat-deep-orange);
-$dark-theme:   mat-dark-theme($dark-primary, $dark-accent, $dark-warn);
+$dark-accent:  mat-palette($mat-grey, 800);
+$dark-card:    mat-palette($mat-blue, 900);
+$dark-theme:   mat-dark-theme($dark-primary, $dark-accent, $dark-card);
 
 
 // Include theme styles for core and each component used in your app.

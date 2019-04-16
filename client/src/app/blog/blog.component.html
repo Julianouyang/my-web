@@ -1,4 +1,13 @@
-<p>
-  This area is currently under construction!
-</p>
+<mat-toolbar color="accent" class="justify-content-center" style="min-height: 100px">
+  <span>Blog</span>
+</mat-toolbar>
+
+<mat-card
+  class="article-card"
+  *ngFor="let article of articles">
+  <mat-card-title> {{article.title}} </mat-card-title>
+  <mat-card-subtitle> {{article.date.getMonth()+1 + '/' + article.date.getDate()}} </mat-card-subtitle>
+  <img mat-card-image src={{article.imgPath}}>
+  <mat-card-content> {{article.description}} </mat-card-content>
+</mat-card>
 
