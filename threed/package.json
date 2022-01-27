@@ -9,6 +9,6 @@
   "author": "Julian",
   "license": "ISC",
   "devDependencies": {
-    "three": "^0.109.0"
+    "three": "^0.137.0"
   }
 }
