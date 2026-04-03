@@ -1,0 +1,18 @@
+{
+  "projects": {
+    "default": "my-web-6f3ac"
+  },
+  "targets": {
+    "my-web-6f3ac": {
+      "hosting": {
+        "production": [
+          "my-web-6f3ac"
+        ],
+        "staging": [
+          "my-web-6f3ac-staging"
+        ]
+      }
+    }
+  },
+  "etags": {}
+}

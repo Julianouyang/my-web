@@ -1,0 +1,46 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout title="About — Julian Ouyang">
+  <section class="pt-12 pb-20 md:pt-20">
+    <h1
+      class="text-4xl font-bold tracking-tight md:text-5xl"
+      style="letter-spacing: -0.03em;"
+    >
+      About
+    </h1>
+
+    <div class="mt-8 max-w-lg space-y-5 text-base leading-relaxed" style="color: var(--color-muted);">
+      <p>
+        I am an engineer at NVIDIA working on autonomous vehicle simulation and AI.
+        I built this site to write things down — notes, ideas, observations.
+        Some of it is public. Some of it is not.
+        I have been maintaining this domain since 2018.
+      </p>
+    </div>
+
+    <div class="mt-12 h-px w-16" style="background: var(--color-border);"></div>
+
+    <h2
+      class="mt-12 text-xl font-semibold tracking-tight"
+      style="letter-spacing: -0.01em;"
+    >
+      Currently
+    </h2>
+    <ul class="mt-5 space-y-3 text-base" style="color: var(--color-muted);">
+      <li class="flex items-start gap-2.5">
+        <span class="mt-0.5 block h-1.5 w-1.5 shrink-0 rounded-full" style="background: var(--color-accent);"></span>
+        Building LLM-powered simulation tools at NVIDIA
+      </li>
+      <li class="flex items-start gap-2.5">
+        <span class="mt-0.5 block h-1.5 w-1.5 shrink-0 rounded-full" style="background: var(--color-accent);"></span>
+        Living in the Bay Area
+      </li>
+      <li class="flex items-start gap-2.5">
+        <span class="mt-0.5 block h-1.5 w-1.5 shrink-0 rounded-full" style="background: var(--color-accent);"></span>
+        Walking my dog Dali 🐕
+      </li>
+    </ul>
+  </section>
+</BaseLayout>

@@ -1,0 +1,47 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import PostCard from "../components/PostCard.astro";
+
+const posts = (await getCollection("posts"))
+  .sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
+---
+
+<BaseLayout title="Julian Ouyang">
+  <!-- Hero -->
+  <section class="pt-12 pb-16 md:pt-20 md:pb-20">
+    <h1
+      class="text-5xl font-bold tracking-tight md:text-7xl"
+      style="letter-spacing: -0.03em;"
+    >
+      Julian Ouyang
+    </h1>
+    <p
+      class="mt-4 text-lg font-medium md:text-xl"
+      style="color: var(--color-muted);"
+    >
+      Engineer. Builder. Occasional writer.
+    </p>
+    <div
+      class="mt-8 h-px w-16"
+      style="background: var(--color-border);"
+    ></div>
+  </section>
+
+  <!-- Posts -->
+  <section>
+    <div class="space-y-2">
+      {
+        posts.map((post) => (
+          <PostCard
+            title={post.data.title}
+            date={post.data.date}
+            slug={post.id}
+            isPublic={post.data.public}
+            tags={post.data.tags}
+          />
+        ))
+      }
+    </div>
+  </section>
+</BaseLayout>
