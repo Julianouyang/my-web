@@ -45,15 +45,15 @@ const currentPath = Astro.url.pathname;
           class="text-base font-semibold tracking-tight no-underline"
           style="color: var(--color-primary); letter-spacing: -0.02em;"
         >
-          Julian Ouyang
+          Home
         </a>
 
         <!-- Right: Nav links + toggle + sign in -->
         <div class="flex items-center gap-1">
           <a
-            href="/"
-            class={`px-3 py-1.5 text-sm font-medium rounded-md no-underline transition-colors ${currentPath === "/" ? "" : ""}`}
-            style={currentPath === "/"
+            href="/writing"
+            class="px-3 py-1.5 text-sm font-medium rounded-md no-underline transition-colors"
+            style={currentPath === "/writing" || currentPath.startsWith("/posts")
               ? `color: var(--color-accent);`
               : `color: var(--color-muted);`}
           >
